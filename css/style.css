@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.pfp{
+    width: 100px;
+}
+
+.container{
+    margin-top:100px;
+}
+
+.mirror{
+    width: 100%;
+    transform: scaleX(-1);
+    border-style: solid;
+    position: absolute;
+    padding-top:40px;
+}
+
+.mirror img{ 
+    opacity: 0.1;
+}
+
+.side{
+    display: flex;
+    border-style: solid;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:0;
+    align-items: center;
+    border-style: solid;
+}
+
+.side img{
+    width: 80px;
+    padding:20px;
+}
+
+.normal-effect .img:nth-child(1), .normal-effect .img:nth-child(3), .normal-effect .img:nth-child(5), .normal-effect .img:nth-child(7), .normal-effect .img:nth-child(9){
+    animation: float 2s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.normal-effect .img:nth-child(2), .normal-effect .img:nth-child(4), .normal-effect .img:nth-child(6), .normal-effect .img:nth-child(8){
+    animation: float 2s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+/* mirror-float */
+
+.mirror-effect .img:nth-child(1), .mirror-effect .img:nth-child(3), .mirror-effect .img:nth-child(5), .mirror-effect .img:nth-child(7), .mirror-effect .img:nth-child(9){
+    animation: mirror-float 2s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.mirror-effect .img:nth-child(2), .mirror-effect .img:nth-child(4), .mirror-effect .img:nth-child(6), .mirror-effect .img:nth-child(8){
+    animation: mirror-float 2s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.side img:nth-child(8){
+    width: 200px;
+}
+
+.side img:nth-child(5){
+    width: 200px;
+}
+
+@media (max-width: 851px) {
+    body{
+        overflow: auto;
+    }
+}
+
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes mirror-float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
