@@ -1,3 +1,0 @@
-# SmoDev
-
-CraftWeb Cooming soon
