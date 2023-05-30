@@ -1,97 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmoDev_</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>SmoDev_ Terminal</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
-    <img src="img/pfp.png" alt="" class="pfp" style="cursor: pointer;" onclick="copyText('_veDomS#8902')">
-    <div class="container">
-        <div class="side normal-effect">
-            <div class="img">
-                <img src="img/html.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/css.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/js.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/php.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/sql.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/java.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/cpp.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/react.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/electron.png" alt="">
-            </div>
+    <div id="terminal">
+        <div id="output">
+            <h1>SmoDev_ Terminal</h1>
         </div>
-        <div class="light"></div>
-        <div class="side mirror mirror-effect">
-            <div class="img">
-                <img src="img/html.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/css.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/js.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/php.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/sql.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/java.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/cpp.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/react.png" alt="">
-            </div>
-            <div class="img">
-                <img src="img/electron.png" alt="">
-            </div>
+        <div id="input-line">
+            <div class="prompt">127.0.0.1@SmoDev_: </div>
+            <div><input type="text" id="input" autofocus /></div>
         </div>
     </div>
-
-
-    <script>
-        function copyText(text) {
-            let textarea = document.createElement("textarea");
-
-            textarea.value = text;
-
-            document.body.appendChild(textarea);
-
-            textarea.select();
-
-            document.execCommand("copy");
-
-            alert("Discord copiato!");
-
-            document.body.removeChild(textarea);
-        }
-    </script>
-
+    
+    <script src="script.js"></script>
 </body>
-
 </html>
